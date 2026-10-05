@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#e77a25">
+  <title>ICEM | People & Attendance</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+  <div id="auth-screen" class="auth-screen">
+    <div class="auth-aside">
+      <a class="brand brand-light" href="#"><span class="brand-mark">i</span><span class="brand-name">ICEM<span>PEOPLE & OPERATIONS</span></span></a>
+      <div class="auth-message"><span class="eyebrow">INTERNATIONAL CENTRE OF EXCELLENCE IN MINING</span><h1>People make<br>progress possible.</h1><p>A thoughtful workspace for the teams advancing the future of mining.</p><div class="auth-orbit"><span>ICEM</span><i></i></div></div>
+      <p class="aside-foot">Fueling innovation for excellence.</p>
+    </div>
+    <section class="auth-panel"><form id="auth-form" class="auth-card"><span class="eyebrow" id="auth-kicker">WELCOME BACK</span><h2 id="auth-title">Sign in to ICEM</h2><p class="muted" id="auth-copy">Your people and operations, all in one place.</p><label>Username<input name="username" autocomplete="username" placeholder="Enter your username" required></label><label>Password<input name="password" type="password" autocomplete="current-password" placeholder="Enter your password" required></label><label id="role-field" class="hidden">Account type<select name="role"><option value="employee">Employee</option><option value="admin">Administrator</option></select></label><button class="button button-primary full" id="auth-submit">Sign in <span>→</span></button><p id="auth-error" class="form-error" role="alert"></p><p class="auth-switch"><span id="auth-toggle-copy">New to ICEM?</span> <button id="auth-toggle" class="text-button" type="button">Create account</button></p></form><span class="auth-legal">ICEM · People operations portal</span></section>
+  </div>
+
+  <div id="app-shell" class="app-shell hidden">
+    <aside class="sidebar"><a class="brand" href="#overview"><span class="brand-mark">i</span><span class="brand-name">ICEM<span>PEOPLE & OPERATIONS</span></span></a><div class="workspace-label">WORKSPACE</div><nav id="navigation" class="navigation"></nav><div class="sidebar-bottom"><div class="help-card"><span class="help-icon">✳</span><strong>Here to help</strong><span>Manage your people, with ease.</span></div><button class="profile-button" id="profile-button"><span class="avatar" id="user-avatar">I</span><span class="profile-copy"><strong id="user-name">ICEM user</strong><small id="user-role">Team member</small></span><span class="profile-dots">···</span></button></div></aside>
+    <main class="main-area"><header class="topbar"><div class="crumb"><span>Workspace</span><b>/</b><strong id="breadcrumb-current">Overview</strong></div><div class="top-actions"><span class="date-label" id="today-label"></span><button class="icon-button" id="refresh-button" title="Refresh data" aria-label="Refresh data">↻</button><button class="top-avatar" id="top-avatar" aria-label="Sign out">I</button></div></header><section class="page-content"><div id="toast" class="toast" role="status"></div><div id="page"></div><footer>© <span id="year"></span> ICEM · International Centre of Excellence in Mining</footer></section></main>
+  </div>
+  <dialog id="record-dialog" class="record-dialog"><form id="record-form" method="dialog"><div class="dialog-head"><div><span class="eyebrow" id="dialog-kicker">NEW RECORD</span><h2 id="dialog-title">Add record</h2></div><button class="icon-button" type="button" id="dialog-close" aria-label="Close">×</button></div><div id="form-fields" class="form-fields"></div><div class="dialog-actions"><button type="button" class="button button-outline" id="dialog-cancel">Cancel</button><button class="button button-primary" type="submit" id="dialog-submit">Save record <span>→</span></button></div></form></dialog>
+  <script src="/assets/app.js" defer></script>
+</body>
+</html>
